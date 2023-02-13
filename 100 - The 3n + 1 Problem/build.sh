@@ -1,5 +1,5 @@
 #!/bin/bash
-SOURCE="closestpair"
+SOURCE="3n1_cache.cpp"
 TIME=10
 rm -rf vgcore*
 # build the program w/ UVA flags
