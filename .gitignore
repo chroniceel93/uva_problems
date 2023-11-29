@@ -1,2 +1,4 @@
-*.txt
-.vscode/launch.json
+*
+!*.cpp
+!*.pas
+!*.sh
