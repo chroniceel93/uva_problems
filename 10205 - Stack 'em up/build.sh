@@ -1,13 +1,13 @@
 #!/bin/bash
-SOURCE="stackemup.cpp"
+SOURCE="stackemup"
 TIME=10
 rm -rf vgcore*
 # build the program w/ UVA flags
-g++ -lm -lcrypt -O2 -ggdb -std=c++11 -pipe -DONLINE_JUDGE -Wall $SOURCE.cpp
+g++ -lm -O2 -ggdb -std=c++11 -pipe -DONLINE_JUDGE -Wall $SOURCE.cpp
 RET=$?
 if [[ $RET -eq 0 ]]
 then
-    g++ -lm -lcrypt -O0 -ggdb -std=c++11 -pipe -DONLINE_JUDGE $SOURCE.cpp -o $SOURCE
+    g++ -lm -O0 -ggdb -std=c++11 -pipe -DONLINE_JUDGE $SOURCE.cpp -o $SOURCE
     # We take a given text.txt holding our test input, and save the result to output.txt
     time timeout $TIME ./a.out < text.txt > output.txt
     #if using vscode, this will automatically open a diff between the generated output, and a known-correct output.
